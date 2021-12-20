@@ -3,6 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Resources\PostResource;
+use App\Http\Resources\PostCollection;
+use App\Models\Post;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,4 +20,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+
+Route::get('/posts/{id}', function($id) {
+    return new PostResource(Post::findOrFail($id));
+});
+
+Route::get('/posts', function() {
+    //dd(Post::all());
+    return new PostCollection(Post::paginate());
 });

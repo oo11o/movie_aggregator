@@ -10,6 +10,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class Article extends Model
 {
     use HasFactory;
+    use Sluggable;
 
     public function tags(){
         return $this->belongToMany(Tag::class);
