@@ -1,8 +1,8 @@
-@extends('layouts/category')
+@extends('layouts/default')
 
 @section('title', 'Подобрать фильмы | Kinopodborka.com')
 @section('description', ' 1 Page Title')
-@section('intro')
+@section('content')
     @foreach($posts as $post)
         <div class="post-content">
             <figure class="icon-overlay icn-link post-media">
