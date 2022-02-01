@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('title', $post[0]['title'])
+@section('description', $post[0]['description'])
 
 @section('content')
     <div class="row">
