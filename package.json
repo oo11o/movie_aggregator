@@ -23,6 +23,9 @@
     },
     "dependencies": {
         "request": "^2.88.2",
+        "vue": "^3.2.29",
+        "vue-loader": "^17.0.0",
+        "vue-router": "^4.0.12",
         "webp-converter": "^2.3.3"
     }
 }

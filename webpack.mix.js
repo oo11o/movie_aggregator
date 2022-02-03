@@ -11,24 +11,25 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix.js('resources/js/app.js', 'public/js')
-//     .sass('resources/sass/app.scss', 'public/css')
-//     .sourceMaps();
+mix.js('resources/js/app.js', 'public/js')
+    .vue()
+    .sass('resources/sass/app.scss', 'public/css')
+    .sourceMaps();
 
 
-mix.styles([
-    'resources/assets/admin/plugins/fontawesome-free/css/all.min.css',
-    'resources/assets/admin/css/adminlte.min.css'
-], 'public_html/assets/admin/css/admin.css');
-
-mix.scripts([
-    'resources/assets/admin/plugins/jquery/jquery.min.js',
-    'resources/assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js',
-    'resources/assets/admin/js/adminlte.min.js',
-    'resources/assets/admin/js/demo.js'
-], 'public_html/assets/admin/js/admin.js');
-
-mix.copyDirectory('resources/assets/admin/img', 'public_html/assets/admin/img');
-mix.copyDirectory('resources/assets/admin/plugins/fontawesome-free/webfonts', 'public_html/assets/admin/webfonts');
-
-mix.copy('resources/assets/admin/css/adminlte.min.css.map', 'public_html/assets/admin/css/adminlte.min.css.map');
+// mix.styles([
+//     'resources/assets/admin/plugins/fontawesome-free/css/all.min.css',
+//     'resources/assets/admin/css/adminlte.min.css'
+// ], 'public_html/assets/admin/css/admin.css');
+//
+// mix.scripts([
+//     'resources/assets/admin/plugins/jquery/jquery.min.js',
+//     'resources/assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js',
+//     'resources/assets/admin/js/adminlte.min.js',
+//     'resources/assets/admin/js/demo.js'
+// ], 'public_html/assets/admin/js/admin.js');
+//
+// mix.copyDirectory('resources/assets/admin/img', 'public_html/assets/admin/img');
+// mix.copyDirectory('resources/assets/admin/plugins/fontawesome-free/webfonts', 'public_html/assets/admin/webfonts');
+//
+// mix.copy('resources/assets/admin/css/adminlte.min.css.map', 'public_html/assets/admin/css/adminlte.min.css.map');
