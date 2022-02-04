@@ -1,5 +1,13 @@
 require('./bootstrap');
 
-import { createApp } from "vue";
+import { createApp } from 'vue';
 
-createApp().mount("#app")
+import Post from './components/Posts/Index';
+
+const app = createApp({
+    components: {
+        Post
+    }
+});
+
+app.mount("#app");
