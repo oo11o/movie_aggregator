@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="{{ asset('assets/admin/css/admin.css') }}">
 </head>
 <body class="hold-transition sidebar-mini">
+
 <!-- Site wrapper -->
-<div class="wrapper">
+<div class="wrapper" id="app">
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
@@ -728,13 +729,14 @@
             <!-- Default box -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Title</h3>
+{{--                    <h3 class="card-title">Title</h3>--}}
 
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                            <i class="fas fa-minus"></i></button>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-                            <i class="fas fa-times"></i></button>
+                    <div class="card-tools float-left">
+                        <post></post>
+{{--                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">--}}
+{{--                            <i class="fas fa-minus"></i></button>--}}
+{{--                        <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">--}}
+{{--                            <i class="fas fa-times"></i></button>--}}
                     </div>
                 </div>
                 <div class="card-body">
@@ -769,7 +771,8 @@
 </div>
 <!-- ./wrapper -->
 
-<script src="{{ asset('assets/admin/js/admin.js') }}"></script>
+<script src ="{{ mix('/js/app.js') }}"></script>
+<script src ="{{ asset('assets/admin/js/admin.js') }}"></script>
 
 </body>
 </html>

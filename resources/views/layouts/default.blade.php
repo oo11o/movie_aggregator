@@ -27,6 +27,10 @@
     </style>
 </head>
 <body>
+    <div id="app">
+        <todo-list></todo-list>
+    </div>
+
     @include('partials.header.top')
     @include('partials.header.navbar')
 
@@ -34,5 +38,6 @@
         @yield('content')
     </section>
     @include('partials.footer')
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
